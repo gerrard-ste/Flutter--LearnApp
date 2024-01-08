@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'sign_up.dart'; // Import the SignUp page (create this file)
+import 'home_page.dart'; // Import the HomePage (create this file)
 
-class Sign_in extends StatelessWidget {
+class sign_up extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sign In Page'),
+        title: Text('Sign Up Page'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -31,34 +31,35 @@ class Sign_in extends StatelessWidget {
                     border: OutlineInputBorder(),
                   ),
                 ),
-                SizedBox(height: 20),
-                ElevatedButton(
-                  onPressed: () {
-                    // Implement your login logic here
-                  },
-                  style: ElevatedButton.styleFrom(
-                    primary: Colors.blue,
-                    onPrimary: Colors.white,
+                SizedBox(height: 12),
+                TextField(
+                  decoration: InputDecoration(
+                    labelText: 'Phone Number',
+                    border: OutlineInputBorder(),
                   ),
-                  child: Text('Login'),
+                ),
+                SizedBox(height: 12),
+                TextField(
+                  decoration: InputDecoration(
+                    labelText: 'Email',
+                    border: OutlineInputBorder(),
+                  ),
                 ),
               ],
             ),
             SizedBox(height: 10),
-            GestureDetector(
-              onTap: () {
+            ElevatedButton(
+              onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => sign_up()),
+                  MaterialPageRoute(builder: (context) => my_home()),
                 );
               },
-              child: Text(
-                "I don't have an account",
-                style: TextStyle(
-                  color: Colors.blue,
-                  decoration: TextDecoration.underline,
-                ),
+              style: ElevatedButton.styleFrom(
+                primary: Colors.blue,
+                onPrimary: Colors.white,
               ),
+              child: Text('Sign Up'),
             ),
           ],
         ),
