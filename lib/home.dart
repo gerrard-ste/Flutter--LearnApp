@@ -22,7 +22,7 @@ class Home extends StatelessWidget {
                 );
               },
               style: ElevatedButton.styleFrom(
-                primary: Colors.blue,
+                primary: Colors.black,
                 onPrimary: Colors.white,
               ),
               child: Text('Welcome'),
